@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['passable_61',['Passable',['../structPassable.html',1,'']]],
-  ['portal_62',['portal',['../structportal.html',1,'']]],
-  ['portal2_63',['portal2',['../structportal2.html',1,'']]],
-  ['professions_64',['Professions',['../structACTOR_1_1Professions.html',1,'ACTOR']]]
+  ['legend_5fpadding_88',['legend_padding',['../classascii_1_1Asciichart.html#a3c792156564f5d7d73d6c17249df1a15',1,'ascii::Asciichart']]],
+  ['license_89',['LICENSE',['../md_LICENSE.html',1,'']]]
 ];

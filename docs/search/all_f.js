@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['security_20policy_116',['Security Policy',['../md_SECURITY.html',1,'']]],
+  ['sgenericitem_117',['SGenericItem',['../structSGenericItem.html',1,'']]],
+  ['show_5flegend_118',['show_legend',['../classascii_1_1Asciichart.html#ad40727d09b22008afaf295de55ec8cdc',1,'ascii::Asciichart']]],
+  ['skillobject_119',['SkillObject',['../classSkillObject.html',1,'']]],
+  ['skillobject_2eh_120',['skillobject.h',['../skillobject_8h.html',1,'']]],
+  ['soundholder_121',['SoundHolder',['../classSoundHolder.html',1,'']]],
+  ['soundholder_2eh_122',['soundholder.h',['../soundholder_8h.html',1,'']]],
+  ['string_123',['String',['../classdoctest_1_1String.html',1,'doctest']]],
+  ['stringmaker_124',['StringMaker',['../structdoctest_1_1StringMaker.html',1,'doctest']]],
+  ['stringmaker_3c_20r_20c_3a_3a_2a_20_3e_125',['StringMaker&lt; R C::* &gt;',['../structdoctest_1_1StringMaker_3_01R_01C_1_1_5_01_4.html',1,'doctest']]],
+  ['stringmaker_3c_20t_20_2a_20_3e_126',['StringMaker&lt; T * &gt;',['../structdoctest_1_1StringMaker_3_01T_01_5_01_4.html',1,'doctest']]],
+  ['stringmakerbase_127',['StringMakerBase',['../structdoctest_1_1detail_1_1StringMakerBase.html',1,'doctest::detail']]],
+  ['stringmakerbase_3c_20detail_3a_3ahas_5finsertion_5foperator_3c_20t_20_3e_3a_3avalue_20_3e_128',['StringMakerBase&lt; detail::has_insertion_operator&lt; T &gt;::value &gt;',['../structdoctest_1_1detail_1_1StringMakerBase.html',1,'doctest::detail']]],
+  ['stringmakerbase_3c_20true_20_3e_129',['StringMakerBase&lt; true &gt;',['../structdoctest_1_1detail_1_1StringMakerBase_3_01true_01_4.html',1,'doctest::detail']]],
+  ['stringstream_130',['StringStream',['../structdoctest_1_1detail_1_1StringStream.html',1,'doctest::detail']]],
+  ['stringstreambase_131',['StringStreamBase',['../structdoctest_1_1detail_1_1StringStreamBase.html',1,'doctest::detail']]],
+  ['stringstreambase_3c_20has_5finsertion_5foperator_3c_20t_20_3e_3a_3avalue_20_3e_132',['StringStreamBase&lt; has_insertion_operator&lt; T &gt;::value &gt;',['../structdoctest_1_1detail_1_1StringStreamBase.html',1,'doctest::detail']]],
+  ['stringstreambase_3c_20true_20_3e_133',['StringStreamBase&lt; true &gt;',['../structdoctest_1_1detail_1_1StringStreamBase_3_01true_01_4.html',1,'doctest::detail']]],
+  ['style_134',['Style',['../classascii_1_1Style.html',1,'ascii']]],
+  ['styles_135',['styles',['../classascii_1_1Asciichart.html#a2dbcd876ea259811a2a18b6a1eeec532',1,'ascii::Asciichart']]],
+  ['subcase_136',['Subcase',['../structdoctest_1_1detail_1_1Subcase.html',1,'doctest::detail']]],
+  ['subcasesignature_137',['SubcaseSignature',['../structdoctest_1_1SubcaseSignature.html',1,'doctest']]],
+  ['support_138',['SUPPORT',['../md_SUPPORT.html',1,'']]],
+  ['symbols_139',['symbols',['../classascii_1_1Asciichart.html#a0ac44b644b20d0c004beee0c03caaad8',1,'ascii::Asciichart']]]
+];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_206',['Init',['../classCGameEngine.html#aa8f7b0b0a71a55f9d16d8103f8874dbf',1,'CGameEngine']]]
+  ['height_280',['height',['../classascii_1_1Asciichart.html#a5e4142477b49d9d9867b0f56c4dae788',1,'ascii::Asciichart']]]
 ];

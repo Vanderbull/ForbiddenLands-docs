@@ -1,0 +1,27 @@
+var classItem =
+[
+    [ "Item", "classItem.html#add5b224c1288d0caec55fcc70891079f", null ],
+    [ "Item", "classItem.html#ab03592d9bf88632a4b8356a31f12e645", null ],
+    [ "BaseWorth", "classItem.html#aeccbab38226f31816d47c5f64e7ac9aa", null ],
+    [ "Bodypart", "classItem.html#a4f31e57bbd48eca47ff294c6f00750d8", null ],
+    [ "DmgType", "classItem.html#a1abf924b7a0e4b8dfe053544074aa6e5", null ],
+    [ "Effect", "classItem.html#a6812ee3706e54a0f4dd6ce46b4241fd6", null ],
+    [ "EffectCharges", "classItem.html#a71015763d7d562b24417d5a06609b1ef", null ],
+    [ "Efficiency", "classItem.html#a829a674bc4209da6c6f1e781e00268c3", null ],
+    [ "Enchantments", "classItem.html#a5cbcc5291102c7bf245a0161e98132bc", null ],
+    [ "Equipable", "classItem.html#a605ac3992d414be782f0e41ea9958377", null ],
+    [ "Equipped", "classItem.html#a36e54dc1065df2ae96120f04f138c549", null ],
+    [ "Features", "classItem.html#ac5af20d563a6290233937b367cc3daf3", null ],
+    [ "icon", "classItem.html#ad394b09a15f96be9622df311f6a8b97b", null ],
+    [ "iconBox", "classItem.html#aad580e947849aa97f8c13b121b699236", null ],
+    [ "MaxDamage", "classItem.html#aba123d994dc9b4ab8875b9c8057258a1", null ],
+    [ "MaxEffect", "classItem.html#a2336c971a5ba86934054af0b3782f71c", null ],
+    [ "MinDamage", "classItem.html#a3f20273e8dadb6f0100331123855e17d", null ],
+    [ "MinEffect", "classItem.html#a2b87f9641aa112509f541d6a2e875fc9", null ],
+    [ "Name", "classItem.html#afa90f8cb5a40f53a8ff8433d7c8060c3", null ],
+    [ "NumHands", "classItem.html#a1d349fad46ac33dcddae4308f5eb8bc5", null ],
+    [ "Price", "classItem.html#a3236dad81a39058da7a7a2bbab1202de", null ],
+    [ "Protection", "classItem.html#ae343ef406c252a7d2472f085524fab0d", null ],
+    [ "Skill", "classItem.html#a088d1f99567c0c1c50838e8878506521", null ],
+    [ "UsedBy", "classItem.html#a103827ee9a99ad3cb1308cd21be062cb", null ]
+];

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('gameengine_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_12598b04fa9e4327d9e1755fcee462fd.html">gameengine</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">gameengine.h</div>  </div>
@@ -93,18 +109,18 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;globals.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;actor.h&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="actor_8h.html">actor.h</a>&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;ingametime.h&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;portals.h&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;randomizer.h&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;weather/weather.h&quot;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;../version.h&quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;classes/skillobject.h&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;classes/itemobject.h&quot;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;classes/textureholder.h&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;classes/soundholder.h&quot;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;classes/worldmap.h&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;classes/questobject.h&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="skillobject_8h.html">classes/skillobject.h</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="itemobject_8h.html">classes/itemobject.h</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="textureholder_8h.html">classes/textureholder.h</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="soundholder_8h.html">classes/soundholder.h</a>&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="worldmap_8h.html">classes/worldmap.h</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="questobject_8h.html">classes/questobject.h</a>&quot;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> testing;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
@@ -445,25 +461,36 @@ $(function() {
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;};</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassACTOR_html"><div class="ttname"><a href="classACTOR.html">ACTOR</a></div><div class="ttdef"><b>Definition:</b> actor.h:10</div></div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aactor_8h_html"><div class="ttname"><a href="actor_8h.html">actor.h</a></div></div>
+<div class="ttc" id="aclassACTOR_html"><div class="ttname"><a href="classACTOR.html">ACTOR</a></div><div class="ttdef"><b>Definition:</b> actor.h:11</div></div>
 <div class="ttc" id="aclassCGameEngine_1_1BaseMonster_html"><div class="ttname"><a href="classCGameEngine_1_1BaseMonster.html">CGameEngine::BaseMonster</a></div><div class="ttdef"><b>Definition:</b> gameengine.h:223</div></div>
 <div class="ttc" id="aclassCGameEngine_html"><div class="ttname"><a href="classCGameEngine.html">CGameEngine</a></div><div class="ttdef"><b>Definition:</b> gameengine.h:48</div></div>
 <div class="ttc" id="aclassCGameEngine_html_a978d9be62400bdf1afeab172714d7230"><div class="ttname"><a href="classCGameEngine.html#a978d9be62400bdf1afeab172714d7230">CGameEngine::current</a></div><div class="ttdeci">SDL_DisplayMode current</div><div class="ttdoc">This is a resolution variable.</div><div class="ttdef"><b>Definition:</b> gameengine.h:130</div></div>
 <div class="ttc" id="aclassCGameState_html"><div class="ttname"><a href="classCGameState.html">CGameState</a></div><div class="ttdef"><b>Definition:</b> gamestate.h:7</div></div>
-<div class="ttc" id="aclassItem_html"><div class="ttname"><a href="classItem.html">Item</a></div><div class="ttdef"><b>Definition:</b> itemobject.h:18</div></div>
-<div class="ttc" id="aclassQuestList_html"><div class="ttname"><a href="classQuestList.html">QuestList</a></div><div class="ttdef"><b>Definition:</b> questobject.h:25</div></div>
-<div class="ttc" id="aclassSkillObject_html"><div class="ttname"><a href="classSkillObject.html">SkillObject</a></div><div class="ttdef"><b>Definition:</b> skillobject.h:10</div></div>
-<div class="ttc" id="aclassSoundHolder_html"><div class="ttname"><a href="classSoundHolder.html">SoundHolder</a></div><div class="ttdef"><b>Definition:</b> soundholder.h:15</div></div>
-<div class="ttc" id="aclassTextureHolder_html"><div class="ttname"><a href="classTextureHolder.html">TextureHolder</a></div><div class="ttdef"><b>Definition:</b> textureholder.h:14</div></div>
-<div class="ttc" id="aclassWorldMap_html"><div class="ttname"><a href="classWorldMap.html">WorldMap</a></div><div class="ttdef"><b>Definition:</b> worldmap.h:12</div></div>
+<div class="ttc" id="aclassItem_html"><div class="ttname"><a href="classItem.html">Item</a></div><div class="ttdef"><b>Definition:</b> itemobject.h:19</div></div>
+<div class="ttc" id="aclassQuestList_html"><div class="ttname"><a href="classQuestList.html">QuestList</a></div><div class="ttdef"><b>Definition:</b> questobject.h:26</div></div>
+<div class="ttc" id="aclassSkillObject_html"><div class="ttname"><a href="classSkillObject.html">SkillObject</a></div><div class="ttdef"><b>Definition:</b> skillobject.h:11</div></div>
+<div class="ttc" id="aclassSoundHolder_html"><div class="ttname"><a href="classSoundHolder.html">SoundHolder</a></div><div class="ttdef"><b>Definition:</b> soundholder.h:16</div></div>
+<div class="ttc" id="aclassTextureHolder_html"><div class="ttname"><a href="classTextureHolder.html">TextureHolder</a></div><div class="ttdef"><b>Definition:</b> textureholder.h:15</div></div>
+<div class="ttc" id="aclassWorldMap_html"><div class="ttname"><a href="classWorldMap.html">WorldMap</a></div><div class="ttdef"><b>Definition:</b> worldmap.h:13</div></div>
+<div class="ttc" id="aitemobject_8h_html"><div class="ttname"><a href="itemobject_8h.html">itemobject.h</a></div></div>
+<div class="ttc" id="aquestobject_8h_html"><div class="ttname"><a href="questobject_8h.html">questobject.h</a></div></div>
+<div class="ttc" id="askillobject_8h_html"><div class="ttname"><a href="skillobject_8h.html">skillobject.h</a></div></div>
+<div class="ttc" id="asoundholder_8h_html"><div class="ttname"><a href="soundholder_8h.html">soundholder.h</a></div></div>
 <div class="ttc" id="astructCGameEngine_1_1Army_html"><div class="ttname"><a href="structCGameEngine_1_1Army.html">CGameEngine::Army</a></div><div class="ttdef"><b>Definition:</b> gameengine.h:354</div></div>
 <div class="ttc" id="astructInGameTime_html"><div class="ttname"><a href="structInGameTime.html">InGameTime</a></div><div class="ttdef"><b>Definition:</b> ingametime.h:8</div></div>
 <div class="ttc" id="astructweather__engine_html"><div class="ttname"><a href="structweather__engine.html">weather_engine</a></div><div class="ttdef"><b>Definition:</b> weather.h:11</div></div>
+<div class="ttc" id="atextureholder_8h_html"><div class="ttname"><a href="textureholder_8h.html">textureholder.h</a></div></div>
+<div class="ttc" id="aworldmap_8h_html"><div class="ttname"><a href="worldmap_8h.html">worldmap.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_12598b04fa9e4327d9e1755fcee462fd.html">gameengine</a></li><li class="navelem"><b>gameengine.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

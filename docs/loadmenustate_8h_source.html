@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('loadmenustate_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_12598b04fa9e4327d9e1755fcee462fd.html">gameengine</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">loadmenustate.h</div>  </div>
@@ -121,13 +137,13 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">// read file contents till end of file</span></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">size_t</span> ret_code = fread(&amp;game-&gt;SActor, <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="classACTOR.html">ACTOR</a>), 1, infile);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.uid &lt;&lt; std::endl &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.current_stats[0] &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.current_stats[1] &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.current_stats[2] &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.current_stats[3] &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.current_stats[4] &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.current_stats[5] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.<a class="code" href="classACTOR.html#a458e23d6ea77c35a5f180db2c9545e89">uid</a> &lt;&lt; std::endl &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.<a class="code" href="classACTOR.html#ad735efc74d4ac562d18b0718e1e67124">current_stats</a>[0] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.<a class="code" href="classACTOR.html#ad735efc74d4ac562d18b0718e1e67124">current_stats</a>[1] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.<a class="code" href="classACTOR.html#ad735efc74d4ac562d18b0718e1e67124">current_stats</a>[2] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.<a class="code" href="classACTOR.html#ad735efc74d4ac562d18b0718e1e67124">current_stats</a>[3] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.<a class="code" href="classACTOR.html#ad735efc74d4ac562d18b0718e1e67124">current_stats</a>[4] &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        std::cout &lt;&lt; game-&gt;SActor.<a class="code" href="classACTOR.html#ad735efc74d4ac562d18b0718e1e67124">current_stats</a>[5] &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        puts(<span class="stringliteral">&quot;Array read successfully, contents: &quot;</span>);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;           <span class="keywordflow">if</span> (feof(infile))</div>
@@ -172,14 +188,20 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassACTOR_html"><div class="ttname"><a href="classACTOR.html">ACTOR</a></div><div class="ttdef"><b>Definition:</b> actor.h:10</div></div>
+<div class="ttc" id="aclassACTOR_html"><div class="ttname"><a href="classACTOR.html">ACTOR</a></div><div class="ttdef"><b>Definition:</b> actor.h:11</div></div>
+<div class="ttc" id="aclassACTOR_html_a458e23d6ea77c35a5f180db2c9545e89"><div class="ttname"><a href="classACTOR.html#a458e23d6ea77c35a5f180db2c9545e89">ACTOR::uid</a></div><div class="ttdeci">uint32_t uid</div><div class="ttdoc">This is a member variable.</div><div class="ttdef"><b>Definition:</b> actor.h:18</div></div>
+<div class="ttc" id="aclassACTOR_html_ad735efc74d4ac562d18b0718e1e67124"><div class="ttname"><a href="classACTOR.html#ad735efc74d4ac562d18b0718e1e67124">ACTOR::current_stats</a></div><div class="ttdeci">int current_stats[7]</div><div class="ttdoc">Stats of the player character.</div><div class="ttdef"><b>Definition:</b> actor.h:44</div></div>
 <div class="ttc" id="aclassCGameEngine_html"><div class="ttname"><a href="classCGameEngine.html">CGameEngine</a></div><div class="ttdef"><b>Definition:</b> gameengine.h:48</div></div>
 <div class="ttc" id="aclassCGameState_html"><div class="ttname"><a href="classCGameState.html">CGameState</a></div><div class="ttdef"><b>Definition:</b> gamestate.h:7</div></div>
 <div class="ttc" id="aclassCLoadMenuState_html"><div class="ttname"><a href="classCLoadMenuState.html">CLoadMenuState</a></div><div class="ttdef"><b>Definition:</b> loadmenustate.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_12598b04fa9e4327d9e1755fcee462fd.html">gameengine</a></li><li class="navelem"><b>loadmenustate.h</b></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

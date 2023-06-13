@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('files.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,50 +87,62 @@ $(function() {
 <div class="contents">
 <div class="textblock">Here is a list of all documented files with brief descriptions:</div><div class="directory">
 <div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span><span onclick="javascript:toggleLevel(4);">4</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_0_" class="arrow" onclick="toggleFolder('0_')">&#9660;</span><span id="img_0_" class="iconfopen" onclick="toggleFolder('0_')">&#160;</span><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html" target="_self">include</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_0_" class="arrow" onclick="toggleFolder('0_0_')">&#9660;</span><span id="img_0_0_" class="iconfopen" onclick="toggleFolder('0_0_')">&#160;</span><a class="el" href="dir_7a6c2c27f035e4462dd10aeadba1cb4e.html" target="_self">classes</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="itemobject_8h_source.html"><span class="icondoc"></span></a><b>itemobject.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_1_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="questobject_8h_source.html"><span class="icondoc"></span></a><b>questobject.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_2_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="skillobject_8h_source.html"><span class="icondoc"></span></a><b>skillobject.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_3_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="soundholder_8h_source.html"><span class="icondoc"></span></a><b>soundholder.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_4_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="textureholder_8h_source.html"><span class="icondoc"></span></a><b>textureholder.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_0_5_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="worldmap_8h_source.html"><span class="icondoc"></span></a><b>worldmap.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_1_" class="arrow" onclick="toggleFolder('0_1_')">&#9660;</span><span id="img_0_1_" class="iconfopen" onclick="toggleFolder('0_1_')">&#160;</span><a class="el" href="dir_12598b04fa9e4327d9e1755fcee462fd.html" target="_self">gameengine</a></td><td class="desc"></td></tr>
-<tr id="row_0_1_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_0_1_0_" class="arrow" onclick="toggleFolder('0_1_0_')">&#9660;</span><span id="img_0_1_0_" class="iconfopen" onclick="toggleFolder('0_1_0_')">&#160;</span><a class="el" href="dir_e904fba327c41ea30ad90a822e30fbf0.html" target="_self">weather</a></td><td class="desc"></td></tr>
-<tr id="row_0_1_0_0_" class="even"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><a href="weather_8h_source.html"><span class="icondoc"></span></a><b>weather.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_1_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="actor_8h_source.html"><span class="icondoc"></span></a><b>actor.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_2_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="battlestate_8h_source.html"><span class="icondoc"></span></a><b>battlestate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_3_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="characterstate_8h_source.html"><span class="icondoc"></span></a><b>characterstate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_4_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="createcharacterstate_8h_source.html"><span class="icondoc"></span></a><b>createcharacterstate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_5_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="encampmentstate_8h_source.html"><span class="icondoc"></span></a><b>encampmentstate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_6_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="gameengine_8h_source.html"><span class="icondoc"></span></a><b>gameengine.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_7_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="gameoverstate_8h_source.html"><span class="icondoc"></span></a><b>gameoverstate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_8_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="gamestate_8h_source.html"><span class="icondoc"></span></a><b>gamestate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_9_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="ingametime_8h_source.html"><span class="icondoc"></span></a><b>ingametime.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_10_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="introstate_8h_source.html"><span class="icondoc"></span></a><b>introstate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_11_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="inventorystate_8h_source.html"><span class="icondoc"></span></a><b>inventorystate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_12_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="loadingstate_8h_source.html"><span class="icondoc"></span></a><b>loadingstate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_13_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="loadmenustate_8h_source.html"><span class="icondoc"></span></a><b>loadmenustate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_14_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="lootstate_8h_source.html"><span class="icondoc"></span></a><b>lootstate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_15_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="menustate_8h_source.html"><span class="icondoc"></span></a><b>menustate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_16_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="playstate_8h_source.html"><span class="icondoc"></span></a><b>playstate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_17_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="queststate_8h_source.html"><span class="icondoc"></span></a><b>queststate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_18_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="savemenustate_8h_source.html"><span class="icondoc"></span></a><b>savemenustate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_19_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="settingsmenustate_8h_source.html"><span class="icondoc"></span></a><b>settingsmenustate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_20_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="shopstate_8h_source.html"><span class="icondoc"></span></a><b>shopstate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_21_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="tavernstate_8h_source.html"><span class="icondoc"></span></a><b>tavernstate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_22_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="villagestate_8h_source.html"><span class="icondoc"></span></a><b>villagestate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_1_23_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="worldmapstate_8h_source.html"><span class="icondoc"></span></a><b>worldmapstate.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_2_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="doctest_8h_source.html"><span class="icondoc"></span></a><b>doctest.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_3_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="globals_8h_source.html"><span class="icondoc"></span></a><b>globals.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_4_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="portals_8h_source.html"><span class="icondoc"></span></a><b>portals.h</b></td><td class="desc"></td></tr>
-<tr id="row_0_5_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="randomizer_8h_source.html"><span class="icondoc"></span></a><b>randomizer.h</b></td><td class="desc"></td></tr>
+<tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_0_" class="arrow" onclick="toggleFolder('0_')">&#9660;</span><span id="img_0_" class="iconfopen" onclick="toggleFolder('0_')">&#160;</span><a class="el" href="dir_5ab9556779379fb447ab095fca573d97.html" target="_self">asciichart-master</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_0_" class="arrow" onclick="toggleFolder('0_0_')">&#9660;</span><span id="img_0_0_" class="iconfopen" onclick="toggleFolder('0_0_')">&#160;</span><a class="el" href="dir_ecb2b1adcafc5168634dd12aeb237f86.html" target="_self">include</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_0_0_0_" class="arrow" onclick="toggleFolder('0_0_0_')">&#9660;</span><span id="img_0_0_0_" class="iconfopen" onclick="toggleFolder('0_0_0_')">&#160;</span><a class="el" href="dir_21e7a543857823025c0a383c324256ed.html" target="_self">ascii</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_0_"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><a href="ascii_8h_source.html"><span class="icondoc"></span></a><b>ascii.h</b></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_1_" class="even"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><a href="color_8h_source.html"><span class="icondoc"></span></a><b>color.h</b></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_2_"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><a href="constants_8h_source.html"><span class="icondoc"></span></a><b>constants.h</b></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_3_" class="even"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><a href="style_8h_source.html"><span class="icondoc"></span></a><b>style.h</b></td><td class="desc"></td></tr>
+<tr id="row_0_0_0_4_"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><a href="text_8h_source.html"><span class="icondoc"></span></a><b>text.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="toggleFolder('1_')">&#9660;</span><span id="img_1_" class="iconfopen" onclick="toggleFolder('1_')">&#160;</span><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html" target="_self">include</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_1_0_" class="arrow" onclick="toggleFolder('1_0_')">&#9660;</span><span id="img_1_0_" class="iconfopen" onclick="toggleFolder('1_0_')">&#160;</span><a class="el" href="dir_7a6c2c27f035e4462dd10aeadba1cb4e.html" target="_self">classes</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_0_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="itemobject_8h_source.html"><span class="icondoc"></span></a><a class="el" href="itemobject_8h.html" target="_self">itemobject.h</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_1_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="questobject_8h_source.html"><span class="icondoc"></span></a><a class="el" href="questobject_8h.html" target="_self">questobject.h</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_2_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="skillobject_8h_source.html"><span class="icondoc"></span></a><a class="el" href="skillobject_8h.html" target="_self">skillobject.h</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_3_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="soundholder_8h_source.html"><span class="icondoc"></span></a><a class="el" href="soundholder_8h.html" target="_self">soundholder.h</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_4_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="textureholder_8h_source.html"><span class="icondoc"></span></a><a class="el" href="textureholder_8h.html" target="_self">textureholder.h</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_5_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="worldmap_8h_source.html"><span class="icondoc"></span></a><a class="el" href="worldmap_8h.html" target="_self">worldmap.h</a></td><td class="desc"></td></tr>
+<tr id="row_1_1_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_1_1_" class="arrow" onclick="toggleFolder('1_1_')">&#9660;</span><span id="img_1_1_" class="iconfopen" onclick="toggleFolder('1_1_')">&#160;</span><a class="el" href="dir_12598b04fa9e4327d9e1755fcee462fd.html" target="_self">gameengine</a></td><td class="desc"></td></tr>
+<tr id="row_1_1_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_1_1_0_" class="arrow" onclick="toggleFolder('1_1_0_')">&#9660;</span><span id="img_1_1_0_" class="iconfopen" onclick="toggleFolder('1_1_0_')">&#160;</span><a class="el" href="dir_e904fba327c41ea30ad90a822e30fbf0.html" target="_self">weather</a></td><td class="desc"></td></tr>
+<tr id="row_1_1_0_0_" class="even"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><a href="weather_8h_source.html"><span class="icondoc"></span></a><b>weather.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_1_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="actor_8h_source.html"><span class="icondoc"></span></a><a class="el" href="actor_8h.html" target="_self">actor.h</a></td><td class="desc"></td></tr>
+<tr id="row_1_1_2_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="battlestate_8h_source.html"><span class="icondoc"></span></a><a class="el" href="battlestate_8h.html" target="_self">battlestate.h</a></td><td class="desc"></td></tr>
+<tr id="row_1_1_3_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="characterstate_8h_source.html"><span class="icondoc"></span></a><a class="el" href="characterstate_8h.html" target="_self">characterstate.h</a></td><td class="desc"></td></tr>
+<tr id="row_1_1_4_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="createcharacterstate_8h_source.html"><span class="icondoc"></span></a><a class="el" href="createcharacterstate_8h.html" target="_self">createcharacterstate.h</a></td><td class="desc"></td></tr>
+<tr id="row_1_1_5_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="encampmentstate_8h_source.html"><span class="icondoc"></span></a><b>encampmentstate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_6_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="gameengine_8h_source.html"><span class="icondoc"></span></a><b>gameengine.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_7_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="gameoverstate_8h_source.html"><span class="icondoc"></span></a><b>gameoverstate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_8_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="gamestate_8h_source.html"><span class="icondoc"></span></a><b>gamestate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_9_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="ingametime_8h_source.html"><span class="icondoc"></span></a><b>ingametime.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_10_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="introstate_8h_source.html"><span class="icondoc"></span></a><b>introstate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_11_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="inventorystate_8h_source.html"><span class="icondoc"></span></a><b>inventorystate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_12_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="loadingstate_8h_source.html"><span class="icondoc"></span></a><b>loadingstate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_13_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="loadmenustate_8h_source.html"><span class="icondoc"></span></a><b>loadmenustate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_14_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="lootstate_8h_source.html"><span class="icondoc"></span></a><b>lootstate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_15_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="menustate_8h_source.html"><span class="icondoc"></span></a><b>menustate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_16_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="playstate_8h_source.html"><span class="icondoc"></span></a><b>playstate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_17_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="queststate_8h_source.html"><span class="icondoc"></span></a><b>queststate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_18_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="savemenustate_8h_source.html"><span class="icondoc"></span></a><b>savemenustate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_19_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="settingsmenustate_8h_source.html"><span class="icondoc"></span></a><b>settingsmenustate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_20_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="shopstate_8h_source.html"><span class="icondoc"></span></a><b>shopstate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_21_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="tavernstate_8h_source.html"><span class="icondoc"></span></a><b>tavernstate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_22_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="villagestate_8h_source.html"><span class="icondoc"></span></a><b>villagestate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_23_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><a href="worldmapstate_8h_source.html"><span class="icondoc"></span></a><b>worldmapstate.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_2_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="doctest_8h_source.html"><span class="icondoc"></span></a><b>doctest.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_3_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="globals_8h_source.html"><span class="icondoc"></span></a><b>globals.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_4_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="portals_8h_source.html"><span class="icondoc"></span></a><b>portals.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_5_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a href="randomizer_8h_source.html"><span class="icondoc"></span></a><b>randomizer.h</b></td><td class="desc"></td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="version_8h_source.html"><span class="icondoc"></span></a><b>version.h</b></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

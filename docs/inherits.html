@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -83,22 +103,62 @@ $(function() {
 <area shape="rect" href="structACTOR_1_1Professions.html" title=" " alt="" coords="5,5,156,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_3.png" border="0" usemap="#aCGameEngine" alt=""/>
+<tr><td><img src="inherit_graph_3.png" border="0" usemap="#aascii_1_1Asciichart" alt=""/>
+<map name="aascii_1_1Asciichart" id="aascii_1_1Asciichart">
+<area shape="rect" href="classascii_1_1Asciichart.html" title=" " alt="" coords="5,5,129,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_4.png" border="0" usemap="#aascii_1_1Background" alt=""/>
+<map name="aascii_1_1Background" id="aascii_1_1Background">
+<area shape="rect" href="classascii_1_1Background.html" title=" " alt="" coords="5,5,143,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_5.png" border="0" usemap="#aascii_1_1Color256" alt=""/>
+<map name="aascii_1_1Color256" id="aascii_1_1Color256">
+<area shape="rect" href="classascii_1_1Color256.html" title=" " alt="" coords="5,5,124,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_6.png" border="0" usemap="#aascii_1_1Decoration" alt=""/>
+<map name="aascii_1_1Decoration" id="aascii_1_1Decoration">
+<area shape="rect" href="classascii_1_1Decoration.html" title=" " alt="" coords="5,5,136,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_7.png" border="0" usemap="#aascii_1_1Foreground" alt=""/>
+<map name="aascii_1_1Foreground" id="aascii_1_1Foreground">
+<area shape="rect" href="classascii_1_1Foreground.html" title=" " alt="" coords="5,5,139,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_8.png" border="0" usemap="#aascii_1_1RGB" alt=""/>
+<map name="aascii_1_1RGB" id="aascii_1_1RGB">
+<area shape="rect" href="classascii_1_1RGB.html" title=" " alt="" coords="5,5,93,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_9.png" border="0" usemap="#aascii_1_1Style" alt=""/>
+<map name="aascii_1_1Style" id="aascii_1_1Style">
+<area shape="rect" href="classascii_1_1Style.html" title=" " alt="" coords="5,5,99,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_10.png" border="0" usemap="#aascii_1_1Text" alt=""/>
+<map name="aascii_1_1Text" id="aascii_1_1Text">
+<area shape="rect" href="classascii_1_1Text.html" title=" " alt="" coords="5,5,92,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_11.png" border="0" usemap="#aCGameEngine" alt=""/>
 <map name="aCGameEngine" id="aCGameEngine">
 <area shape="rect" href="classCGameEngine.html" title=" " alt="" coords="5,5,120,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_4.png" border="0" usemap="#aCGameEngine_1_1Army" alt=""/>
+<tr><td><img src="inherit_graph_12.png" border="0" usemap="#aCGameEngine_1_1Army" alt=""/>
 <map name="aCGameEngine_1_1Army" id="aCGameEngine_1_1Army">
 <area shape="rect" href="structCGameEngine_1_1Army.html" title=" " alt="" coords="5,5,163,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" usemap="#aCGameEngine_1_1BaseMonster" alt=""/>
+<tr><td><img src="inherit_graph_13.png" border="0" usemap="#aCGameEngine_1_1BaseMonster" alt=""/>
 <map name="aCGameEngine_1_1BaseMonster" id="aCGameEngine_1_1BaseMonster">
 <area shape="rect" href="classCGameEngine_1_1BaseMonster.html" title=" " alt="" coords="5,5,212,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" usemap="#aCGameState" alt=""/>
+<tr><td><img src="inherit_graph_14.png" border="0" usemap="#aCGameState" alt=""/>
 <map name="aCGameState" id="aCGameState">
 <area shape="rect" href="classCGameState.html" title=" " alt="" coords="5,461,109,488"/>
 <area shape="rect" href="classCBattleState.html" title=" " alt="" coords="191,5,295,32"/>
@@ -122,349 +182,357 @@ $(function() {
 <area shape="rect" href="classCWorldMapState.html" title=" " alt="" coords="177,917,308,944"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" usemap="#adoctest_1_1Approx" alt=""/>
+<tr><td><img src="inherit_graph_15.png" border="0" usemap="#aClient" alt=""/>
+<map name="aClient" id="aClient">
+<area shape="rect" href="structClient.html" title=" " alt="" coords="5,5,65,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_16.png" border="0" usemap="#adoctest_1_1Approx" alt=""/>
 <map name="adoctest_1_1Approx" id="adoctest_1_1Approx">
 <area shape="rect" href="classdoctest_1_1Approx.html" title=" " alt="" coords="5,5,129,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" usemap="#adoctest_1_1AssertData" alt=""/>
+<tr><td><img src="inherit_graph_17.png" border="0" usemap="#adoctest_1_1AssertData" alt=""/>
 <map name="adoctest_1_1AssertData" id="adoctest_1_1AssertData">
 <area shape="rect" href="structdoctest_1_1AssertData.html" title=" " alt="" coords="5,5,156,32"/>
 <area shape="rect" href="structdoctest_1_1detail_1_1ResultBuilder.html" title=" " alt="" coords="204,5,415,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_9.png" border="0" usemap="#adoctest_1_1Context" alt=""/>
+<tr><td><img src="inherit_graph_18.png" border="0" usemap="#adoctest_1_1Context" alt=""/>
 <map name="adoctest_1_1Context" id="adoctest_1_1Context">
 <area shape="rect" href="classdoctest_1_1Context.html" title=" " alt="" coords="5,5,135,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" usemap="#adoctest_1_1ContextOptions" alt=""/>
+<tr><td><img src="inherit_graph_19.png" border="0" usemap="#adoctest_1_1ContextOptions" alt=""/>
 <map name="adoctest_1_1ContextOptions" id="adoctest_1_1ContextOptions">
 <area shape="rect" href="structdoctest_1_1ContextOptions.html" title="OCLINT too many fields." alt="" coords="5,5,184,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_11.png" border="0" usemap="#adoctest_1_1CurrentTestCaseStats" alt=""/>
+<tr><td><img src="inherit_graph_20.png" border="0" usemap="#adoctest_1_1CurrentTestCaseStats" alt=""/>
 <map name="adoctest_1_1CurrentTestCaseStats" id="adoctest_1_1CurrentTestCaseStats">
 <area shape="rect" href="structdoctest_1_1CurrentTestCaseStats.html" title=" " alt="" coords="5,5,189,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_12.png" border="0" usemap="#adoctest_1_1detail_1_1deferred__false_3_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_21.png" border="0" usemap="#adoctest_1_1detail_1_1deferred__false_3_01T_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1deferred__false_3_01T_01_4" id="adoctest_1_1detail_1_1deferred__false_3_01T_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1deferred__false.html" title=" " alt="" coords="5,5,184,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_13.png" border="0" usemap="#adoctest_1_1detail_1_1enable__if_3_01CONDITION_00_01TYPE_01_4" alt=""/>
+<tr><td><img src="inherit_graph_22.png" border="0" usemap="#adoctest_1_1detail_1_1enable__if_3_01CONDITION_00_01TYPE_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1enable__if_3_01CONDITION_00_01TYPE_01_4" id="adoctest_1_1detail_1_1enable__if_3_01CONDITION_00_01TYPE_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1enable__if.html" title=" " alt="" coords="5,5,188,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_14.png" border="0" usemap="#adoctest_1_1detail_1_1enable__if_3_01true_00_01TYPE_01_4" alt=""/>
+<tr><td><img src="inherit_graph_23.png" border="0" usemap="#adoctest_1_1detail_1_1enable__if_3_01true_00_01TYPE_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1enable__if_3_01true_00_01TYPE_01_4" id="adoctest_1_1detail_1_1enable__if_3_01true_00_01TYPE_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1enable__if_3_01true_00_01TYPE_01_4.html" title=" " alt="" coords="5,5,172,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_15.png" border="0" usemap="#adoctest_1_1detail_1_1ExpressionDecomposer" alt=""/>
+<tr><td><img src="inherit_graph_24.png" border="0" usemap="#adoctest_1_1detail_1_1ExpressionDecomposer" alt=""/>
 <map name="adoctest_1_1detail_1_1ExpressionDecomposer" id="adoctest_1_1detail_1_1ExpressionDecomposer">
 <area shape="rect" href="structdoctest_1_1detail_1_1ExpressionDecomposer.html" title=" " alt="" coords="5,5,200,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_16.png" border="0" usemap="#adoctest_1_1detail_1_1filldata_3_01const_01char_0fN_0e_4" alt=""/>
+<tr><td><img src="inherit_graph_25.png" border="0" usemap="#adoctest_1_1detail_1_1filldata_3_01const_01char_0fN_0e_4" alt=""/>
 <map name="adoctest_1_1detail_1_1filldata_3_01const_01char_0fN_0e_4" id="adoctest_1_1detail_1_1filldata_3_01const_01char_0fN_0e_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1filldata_3_01const_01char_0fN_0e_4.html" title=" " alt="" coords="5,5,173,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_17.png" border="0" usemap="#adoctest_1_1detail_1_1filldata_3_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_26.png" border="0" usemap="#adoctest_1_1detail_1_1filldata_3_01T_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1filldata_3_01T_01_4" id="adoctest_1_1detail_1_1filldata_3_01T_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1filldata.html" title=" " alt="" coords="5,5,212,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_18.png" border="0" usemap="#adoctest_1_1detail_1_1filldata_3_01T_0fN_0e_4" alt=""/>
+<tr><td><img src="inherit_graph_27.png" border="0" usemap="#adoctest_1_1detail_1_1filldata_3_01T_0fN_0e_4" alt=""/>
 <map name="adoctest_1_1detail_1_1filldata_3_01T_0fN_0e_4" id="adoctest_1_1detail_1_1filldata_3_01T_0fN_0e_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1filldata_3_01T_0fN_0e_4.html" title=" " alt="" coords="5,5,173,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_19.png" border="0" usemap="#adoctest_1_1detail_1_1has__insertion__operator__impl_1_1check_3_01class_00_01class_01_4" alt=""/>
+<tr><td><img src="inherit_graph_28.png" border="0" usemap="#adoctest_1_1detail_1_1has__insertion__operator__impl_1_1check_3_01class_00_01class_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1has__insertion__operator__impl_1_1check_3_01class_00_01class_01_4" id="adoctest_1_1detail_1_1has__insertion__operator__impl_1_1check_3_01class_00_01class_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1has__insertion__operator__impl_1_1check.html" title=" " alt="" coords="5,5,189,61"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_20.png" border="0" usemap="#adoctest_1_1detail_1_1has__insertion__operator__impl_1_1check_3_01T_00_01decltype_07os_07_08_3_3_01val_3_01T_01_4_07_08_00_01void_07_08_08_4" alt=""/>
+<tr><td><img src="inherit_graph_29.png" border="0" usemap="#adoctest_1_1detail_1_1has__insertion__operator__impl_1_1check_3_01T_00_01decltype_07os_07_08_3_3_01val_3_01T_01_4_07_08_00_01void_07_08_08_4" alt=""/>
 <map name="adoctest_1_1detail_1_1has__insertion__operator__impl_1_1check_3_01T_00_01decltype_07os_07_08_3_3_01val_3_01T_01_4_07_08_00_01void_07_08_08_4" id="adoctest_1_1detail_1_1has__insertion__operator__impl_1_1check_3_01T_00_01decltype_07os_07_08_3_3_01val_3_01T_01_4_07_08_00_01void_07_08_08_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1has__insertion__operator__impl_1_1check_3_01T_00_01decltype_07os_07_0e2c4b9cfd5c6239f9132a587c9499e40.html" title=" " alt="" coords="5,5,193,76"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_21.png" border="0" usemap="#adoctest_1_1detail_1_1IExceptionTranslator" alt=""/>
+<tr><td><img src="inherit_graph_30.png" border="0" usemap="#adoctest_1_1detail_1_1IExceptionTranslator" alt=""/>
 <map name="adoctest_1_1detail_1_1IExceptionTranslator" id="adoctest_1_1detail_1_1IExceptionTranslator">
 <area shape="rect" href="structdoctest_1_1detail_1_1IExceptionTranslator.html" title=" " alt="" coords="5,5,196,47"/>
 <area shape="rect" href="classdoctest_1_1detail_1_1ExceptionTranslator.html" title="OCLINT destructor of virtual class." alt="" coords="244,5,431,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_22.png" border="0" usemap="#adoctest_1_1detail_1_1is__enum_3_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_31.png" border="0" usemap="#adoctest_1_1detail_1_1is__enum_3_01T_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1is__enum_3_01T_01_4" id="adoctest_1_1detail_1_1is__enum_3_01T_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1is__enum.html" title=" " alt="" coords="5,5,140,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_23.png" border="0" usemap="#adoctest_1_1detail_1_1is__lvalue__reference_3_01T_01_6_01_4" alt=""/>
+<tr><td><img src="inherit_graph_32.png" border="0" usemap="#adoctest_1_1detail_1_1is__lvalue__reference_3_01T_01_6_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1is__lvalue__reference_3_01T_01_6_01_4" id="adoctest_1_1detail_1_1is__lvalue__reference_3_01T_01_6_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1is__lvalue__reference_3_01T_01_6_01_4.html" title=" " alt="" coords="5,5,196,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_24.png" border="0" usemap="#adoctest_1_1detail_1_1is__lvalue__reference_3_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_33.png" border="0" usemap="#adoctest_1_1detail_1_1is__lvalue__reference_3_01T_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1is__lvalue__reference_3_01T_01_4" id="adoctest_1_1detail_1_1is__lvalue__reference_3_01T_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1is__lvalue__reference.html" title=" " alt="" coords="5,5,181,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_25.png" border="0" usemap="#adoctest_1_1detail_1_1is__rvalue__reference_3_01T_01_6_6_01_4" alt=""/>
+<tr><td><img src="inherit_graph_34.png" border="0" usemap="#adoctest_1_1detail_1_1is__rvalue__reference_3_01T_01_6_6_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1is__rvalue__reference_3_01T_01_6_6_01_4" id="adoctest_1_1detail_1_1is__rvalue__reference_3_01T_01_6_6_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1is__rvalue__reference_3_01T_01_6_6_01_4.html" title=" " alt="" coords="5,5,207,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_26.png" border="0" usemap="#adoctest_1_1detail_1_1is__rvalue__reference_3_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_35.png" border="0" usemap="#adoctest_1_1detail_1_1is__rvalue__reference_3_01T_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1is__rvalue__reference_3_01T_01_4" id="adoctest_1_1detail_1_1is__rvalue__reference_3_01T_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1is__rvalue__reference.html" title=" " alt="" coords="5,5,183,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_27.png" border="0" usemap="#adoctest_1_1detail_1_1RelationalComparator_3_01int_00_01L_00_01R_01_4" alt=""/>
+<tr><td><img src="inherit_graph_36.png" border="0" usemap="#adoctest_1_1detail_1_1RelationalComparator_3_01int_00_01L_00_01R_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1RelationalComparator_3_01int_00_01L_00_01R_01_4" id="adoctest_1_1detail_1_1RelationalComparator_3_01int_00_01L_00_01R_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1RelationalComparator.html" title=" " alt="" coords="5,5,195,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_28.png" border="0" usemap="#adoctest_1_1detail_1_1remove__const_3_01const_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_37.png" border="0" usemap="#adoctest_1_1detail_1_1remove__const_3_01const_01T_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1remove__const_3_01const_01T_01_4" id="adoctest_1_1detail_1_1remove__const_3_01const_01T_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1remove__const_3_01const_01T_01_4.html" title=" " alt="" coords="5,5,179,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_29.png" border="0" usemap="#adoctest_1_1detail_1_1remove__const_3_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_38.png" border="0" usemap="#adoctest_1_1detail_1_1remove__const_3_01T_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1remove__const_3_01T_01_4" id="adoctest_1_1detail_1_1remove__const_3_01T_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1remove__const.html" title=" " alt="" coords="5,5,179,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_30.png" border="0" usemap="#adoctest_1_1detail_1_1remove__reference_3_01T_01_6_01_4" alt=""/>
+<tr><td><img src="inherit_graph_39.png" border="0" usemap="#adoctest_1_1detail_1_1remove__reference_3_01T_01_6_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1remove__reference_3_01T_01_6_01_4" id="adoctest_1_1detail_1_1remove__reference_3_01T_01_6_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1remove__reference_3_01T_01_6_01_4.html" title=" " alt="" coords="5,5,179,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_31.png" border="0" usemap="#adoctest_1_1detail_1_1remove__reference_3_01T_01_6_6_01_4" alt=""/>
+<tr><td><img src="inherit_graph_40.png" border="0" usemap="#adoctest_1_1detail_1_1remove__reference_3_01T_01_6_6_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1remove__reference_3_01T_01_6_6_01_4" id="adoctest_1_1detail_1_1remove__reference_3_01T_01_6_6_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1remove__reference_3_01T_01_6_6_01_4.html" title=" " alt="" coords="5,5,179,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_32.png" border="0" usemap="#adoctest_1_1detail_1_1remove__reference_3_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_41.png" border="0" usemap="#adoctest_1_1detail_1_1remove__reference_3_01T_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1remove__reference_3_01T_01_4" id="adoctest_1_1detail_1_1remove__reference_3_01T_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1remove__reference.html" title=" " alt="" coords="5,5,179,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_33.png" border="0" usemap="#adoctest_1_1detail_1_1Result" alt=""/>
+<tr><td><img src="inherit_graph_42.png" border="0" usemap="#adoctest_1_1detail_1_1Result" alt=""/>
 <map name="adoctest_1_1detail_1_1Result" id="adoctest_1_1detail_1_1Result">
 <area shape="rect" href="structdoctest_1_1detail_1_1Result.html" title=" " alt="" coords="5,5,169,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_34.png" border="0" usemap="#adoctest_1_1detail_1_1StringMakerBase_3_01C_01_4" alt=""/>
+<tr><td><img src="inherit_graph_43.png" border="0" usemap="#adoctest_1_1detail_1_1StringMakerBase_3_01C_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1StringMakerBase_3_01C_01_4" id="adoctest_1_1detail_1_1StringMakerBase_3_01C_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1StringMakerBase.html" title=" " alt="" coords="5,5,207,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_35.png" border="0" usemap="#adoctest_1_1detail_1_1StringMakerBase_3_01detail_1_1has__insertion__operator_3_01T_01_4_1_1value_01_4" alt=""/>
+<tr><td><img src="inherit_graph_44.png" border="0" usemap="#adoctest_1_1detail_1_1StringMakerBase_3_01detail_1_1has__insertion__operator_3_01T_01_4_1_1value_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1StringMakerBase_3_01detail_1_1has__insertion__operator_3_01T_01_4_1_1value_01_4" id="adoctest_1_1detail_1_1StringMakerBase_3_01detail_1_1has__insertion__operator_3_01T_01_4_1_1value_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1StringMakerBase.html" title=" " alt="" coords="5,5,207,61"/>
 <area shape="rect" href="structdoctest_1_1StringMaker.html" title=" " alt="" coords="255,20,449,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_36.png" border="0" usemap="#adoctest_1_1detail_1_1StringMakerBase_3_01true_01_4" alt=""/>
+<tr><td><img src="inherit_graph_45.png" border="0" usemap="#adoctest_1_1detail_1_1StringMakerBase_3_01true_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1StringMakerBase_3_01true_01_4" id="adoctest_1_1detail_1_1StringMakerBase_3_01true_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1StringMakerBase_3_01true_01_4.html" title=" " alt="" coords="5,5,207,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_37.png" border="0" usemap="#adoctest_1_1detail_1_1StringStreamBase_3_01C_01_4" alt=""/>
+<tr><td><img src="inherit_graph_46.png" border="0" usemap="#adoctest_1_1detail_1_1StringStreamBase_3_01C_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1StringStreamBase_3_01C_01_4" id="adoctest_1_1detail_1_1StringStreamBase_3_01C_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1StringStreamBase.html" title=" " alt="" coords="5,5,213,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_38.png" border="0" usemap="#adoctest_1_1detail_1_1StringStreamBase_3_01has__insertion__operator_3_01T_01_4_1_1value_01_4" alt=""/>
+<tr><td><img src="inherit_graph_47.png" border="0" usemap="#adoctest_1_1detail_1_1StringStreamBase_3_01has__insertion__operator_3_01T_01_4_1_1value_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1StringStreamBase_3_01has__insertion__operator_3_01T_01_4_1_1value_01_4" id="adoctest_1_1detail_1_1StringStreamBase_3_01has__insertion__operator_3_01T_01_4_1_1value_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1StringStreamBase.html" title=" " alt="" coords="5,5,224,61"/>
 <area shape="rect" href="structdoctest_1_1detail_1_1StringStream.html" title=" " alt="" coords="272,20,519,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_39.png" border="0" usemap="#adoctest_1_1detail_1_1StringStreamBase_3_01true_01_4" alt=""/>
+<tr><td><img src="inherit_graph_48.png" border="0" usemap="#adoctest_1_1detail_1_1StringStreamBase_3_01true_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1StringStreamBase_3_01true_01_4" id="adoctest_1_1detail_1_1StringStreamBase_3_01true_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1StringStreamBase_3_01true_01_4.html" title=" " alt="" coords="5,5,213,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_40.png" border="0" usemap="#adoctest_1_1detail_1_1Subcase" alt=""/>
+<tr><td><img src="inherit_graph_49.png" border="0" usemap="#adoctest_1_1detail_1_1Subcase" alt=""/>
 <map name="adoctest_1_1detail_1_1Subcase" id="adoctest_1_1detail_1_1Subcase">
 <area shape="rect" href="structdoctest_1_1detail_1_1Subcase.html" title=" " alt="" coords="5,5,183,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_41.png" border="0" usemap="#adoctest_1_1detail_1_1TestFailureException" alt=""/>
+<tr><td><img src="inherit_graph_50.png" border="0" usemap="#adoctest_1_1detail_1_1TestFailureException" alt=""/>
 <map name="adoctest_1_1detail_1_1TestFailureException" id="adoctest_1_1detail_1_1TestFailureException">
 <area shape="rect" href="structdoctest_1_1detail_1_1TestFailureException.html" title=" " alt="" coords="5,5,197,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_42.png" border="0" usemap="#adoctest_1_1detail_1_1TestSuite" alt=""/>
+<tr><td><img src="inherit_graph_51.png" border="0" usemap="#adoctest_1_1detail_1_1TestSuite" alt=""/>
 <map name="adoctest_1_1detail_1_1TestSuite" id="adoctest_1_1detail_1_1TestSuite">
 <area shape="rect" href="structdoctest_1_1detail_1_1TestSuite.html" title=" " alt="" coords="5,5,188,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_43.png" border="0" usemap="#adoctest_1_1detail_1_1underlying__type_3_01T_01_4" alt=""/>
+<tr><td><img src="inherit_graph_52.png" border="0" usemap="#adoctest_1_1detail_1_1underlying__type_3_01T_01_4" alt=""/>
 <map name="adoctest_1_1detail_1_1underlying__type_3_01T_01_4" id="adoctest_1_1detail_1_1underlying__type_3_01T_01_4">
 <area shape="rect" href="structdoctest_1_1detail_1_1underlying__type.html" title=" " alt="" coords="5,5,197,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_44.png" border="0" usemap="#adoctest_1_1IContextScope" alt=""/>
+<tr><td><img src="inherit_graph_53.png" border="0" usemap="#adoctest_1_1IContextScope" alt=""/>
 <map name="adoctest_1_1IContextScope" id="adoctest_1_1IContextScope">
 <area shape="rect" href="structdoctest_1_1IContextScope.html" title=" " alt="" coords="5,13,177,39"/>
 <area shape="rect" href="classdoctest_1_1detail_1_1ContextScopeBase.html" title=" " alt="" coords="225,5,400,47"/>
 <area shape="rect" href="classdoctest_1_1detail_1_1ContextScope.html" title=" " alt="" coords="448,5,623,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_45.png" border="0" usemap="#adoctest_1_1IReporter" alt=""/>
+<tr><td><img src="inherit_graph_54.png" border="0" usemap="#adoctest_1_1IReporter" alt=""/>
 <map name="adoctest_1_1IReporter" id="adoctest_1_1IReporter">
 <area shape="rect" href="structdoctest_1_1IReporter.html" title=" " alt="" coords="5,5,144,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_46.png" border="0" usemap="#adoctest_1_1MessageData" alt=""/>
+<tr><td><img src="inherit_graph_55.png" border="0" usemap="#adoctest_1_1MessageData" alt=""/>
 <map name="adoctest_1_1MessageData" id="adoctest_1_1MessageData">
 <area shape="rect" href="structdoctest_1_1MessageData.html" title=" " alt="" coords="5,13,172,39"/>
 <area shape="rect" href="structdoctest_1_1detail_1_1MessageBuilder.html" title=" " alt="" coords="220,5,401,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_47.png" border="0" usemap="#adoctest_1_1QueryData" alt=""/>
+<tr><td><img src="inherit_graph_56.png" border="0" usemap="#adoctest_1_1QueryData" alt=""/>
 <map name="adoctest_1_1QueryData" id="adoctest_1_1QueryData">
 <area shape="rect" href="structdoctest_1_1QueryData.html" title=" " alt="" coords="5,5,153,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_48.png" border="0" usemap="#adoctest_1_1String" alt=""/>
+<tr><td><img src="inherit_graph_57.png" border="0" usemap="#adoctest_1_1String" alt=""/>
 <map name="adoctest_1_1String" id="adoctest_1_1String">
 <area shape="rect" href="classdoctest_1_1String.html" title=" " alt="" coords="5,5,121,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_49.png" border="0" usemap="#adoctest_1_1StringMaker_3_01R_01C_1_1_5_01_4" alt=""/>
+<tr><td><img src="inherit_graph_58.png" border="0" usemap="#adoctest_1_1StringMaker_3_01R_01C_1_1_5_01_4" alt=""/>
 <map name="adoctest_1_1StringMaker_3_01R_01C_1_1_5_01_4" id="adoctest_1_1StringMaker_3_01R_01C_1_1_5_01_4">
 <area shape="rect" href="structdoctest_1_1StringMaker_3_01R_01C_1_1_5_01_4.html" title=" " alt="" coords="5,5,161,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_50.png" border="0" usemap="#adoctest_1_1StringMaker_3_01T_01_5_01_4" alt=""/>
+<tr><td><img src="inherit_graph_59.png" border="0" usemap="#adoctest_1_1StringMaker_3_01T_01_5_01_4" alt=""/>
 <map name="adoctest_1_1StringMaker_3_01T_01_5_01_4" id="adoctest_1_1StringMaker_3_01T_01_5_01_4">
 <area shape="rect" href="structdoctest_1_1StringMaker_3_01T_01_5_01_4.html" title=" " alt="" coords="5,5,161,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_51.png" border="0" usemap="#adoctest_1_1SubcaseSignature" alt=""/>
+<tr><td><img src="inherit_graph_60.png" border="0" usemap="#adoctest_1_1SubcaseSignature" alt=""/>
 <map name="adoctest_1_1SubcaseSignature" id="adoctest_1_1SubcaseSignature">
 <area shape="rect" href="structdoctest_1_1SubcaseSignature.html" title=" " alt="" coords="5,5,200,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_52.png" border="0" usemap="#adoctest_1_1TestCaseData" alt=""/>
+<tr><td><img src="inherit_graph_61.png" border="0" usemap="#adoctest_1_1TestCaseData" alt=""/>
 <map name="adoctest_1_1TestCaseData" id="adoctest_1_1TestCaseData">
 <area shape="rect" href="structdoctest_1_1TestCaseData.html" title=" " alt="" coords="5,5,172,32"/>
 <area shape="rect" href="structdoctest_1_1detail_1_1TestCase.html" title=" " alt="" coords="220,5,401,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_53.png" border="0" usemap="#adoctest_1_1TestCaseException" alt=""/>
+<tr><td><img src="inherit_graph_62.png" border="0" usemap="#adoctest_1_1TestCaseException" alt=""/>
 <map name="adoctest_1_1TestCaseException" id="adoctest_1_1TestCaseException">
 <area shape="rect" href="structdoctest_1_1TestCaseException.html" title=" " alt="" coords="5,5,205,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_54.png" border="0" usemap="#adoctest_1_1TestRunStats" alt=""/>
+<tr><td><img src="inherit_graph_63.png" border="0" usemap="#adoctest_1_1TestRunStats" alt=""/>
 <map name="adoctest_1_1TestRunStats" id="adoctest_1_1TestRunStats">
 <area shape="rect" href="structdoctest_1_1TestRunStats.html" title=" " alt="" coords="5,5,168,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_55.png" border="0" usemap="#aInGameTime" alt=""/>
+<tr><td><img src="inherit_graph_64.png" border="0" usemap="#aInGameTime" alt=""/>
 <map name="aInGameTime" id="aInGameTime">
 <area shape="rect" href="structInGameTime.html" title=" " alt="" coords="5,5,112,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_56.png" border="0" usemap="#aItem" alt=""/>
+<tr><td><img src="inherit_graph_65.png" border="0" usemap="#aItem" alt=""/>
 <map name="aItem" id="aItem">
 <area shape="rect" href="classItem.html" title=" " alt="" coords="5,5,57,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_57.png" border="0" usemap="#aItemRecord" alt=""/>
+<tr><td><img src="inherit_graph_66.png" border="0" usemap="#aItemRecord" alt=""/>
 <map name="aItemRecord" id="aItemRecord">
 <area shape="rect" href="structItemRecord.html" title=" " alt="" coords="5,5,103,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_58.png" border="0" usemap="#aPassable" alt=""/>
+<tr><td><img src="inherit_graph_67.png" border="0" usemap="#aPassable" alt=""/>
 <map name="aPassable" id="aPassable">
 <area shape="rect" href="structPassable.html" title=" " alt="" coords="5,5,84,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_59.png" border="0" usemap="#aportal" alt=""/>
+<tr><td><img src="inherit_graph_68.png" border="0" usemap="#aportal" alt=""/>
 <map name="aportal" id="aportal">
 <area shape="rect" href="structportal.html" title=" " alt="" coords="5,5,65,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_60.png" border="0" usemap="#aportal2" alt=""/>
+<tr><td><img src="inherit_graph_69.png" border="0" usemap="#aportal2" alt=""/>
 <map name="aportal2" id="aportal2">
 <area shape="rect" href="structportal2.html" title=" " alt="" coords="5,5,73,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_61.png" border="0" usemap="#aQuest" alt=""/>
+<tr><td><img src="inherit_graph_70.png" border="0" usemap="#aQuest" alt=""/>
 <map name="aQuest" id="aQuest">
 <area shape="rect" href="classQuest.html" title=" " alt="" coords="5,5,65,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_62.png" border="0" usemap="#aQuestList" alt=""/>
+<tr><td><img src="inherit_graph_71.png" border="0" usemap="#aQuestList" alt=""/>
 <map name="aQuestList" id="aQuestList">
 <area shape="rect" href="classQuestList.html" title=" " alt="" coords="5,5,88,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_63.png" border="0" usemap="#aSGenericItem" alt=""/>
+<tr><td><img src="inherit_graph_72.png" border="0" usemap="#aSGenericItem" alt=""/>
 <map name="aSGenericItem" id="aSGenericItem">
 <area shape="rect" href="structSGenericItem.html" title=" " alt="" coords="5,5,116,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_64.png" border="0" usemap="#aSkillObject" alt=""/>
+<tr><td><img src="inherit_graph_73.png" border="0" usemap="#aSkillObject" alt=""/>
 <map name="aSkillObject" id="aSkillObject">
 <area shape="rect" href="classSkillObject.html" title=" " alt="" coords="5,5,97,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_65.png" border="0" usemap="#aSoundHolder" alt=""/>
+<tr><td><img src="inherit_graph_74.png" border="0" usemap="#aSoundHolder" alt=""/>
 <map name="aSoundHolder" id="aSoundHolder">
 <area shape="rect" href="classSoundHolder.html" title=" " alt="" coords="5,5,111,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_66.png" border="0" usemap="#astd_1_1basic__istream_3_01charT_00_01traits_01_4" alt=""/>
+<tr><td><img src="inherit_graph_75.png" border="0" usemap="#astd_1_1basic__istream_3_01charT_00_01traits_01_4" alt=""/>
 <map name="astd_1_1basic__istream_3_01charT_00_01traits_01_4" id="astd_1_1basic__istream_3_01charT_00_01traits_01_4">
 <area shape="rect" href="classstd_1_1basic__istream.html" title=" " alt="" coords="5,5,147,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_67.png" border="0" usemap="#astd_1_1basic__ostream_3_01charT_00_01traits_01_4" alt=""/>
+<tr><td><img src="inherit_graph_76.png" border="0" usemap="#astd_1_1basic__ostream_3_01charT_00_01traits_01_4" alt=""/>
 <map name="astd_1_1basic__ostream_3_01charT_00_01traits_01_4" id="astd_1_1basic__ostream_3_01charT_00_01traits_01_4">
 <area shape="rect" href="classstd_1_1basic__ostream.html" title=" " alt="" coords="5,5,151,47"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_68.png" border="0" usemap="#astd_1_1char__traits_3_01charT_01_4" alt=""/>
+<tr><td><img src="inherit_graph_77.png" border="0" usemap="#astd_1_1char__traits_3_01charT_01_4" alt=""/>
 <map name="astd_1_1char__traits_3_01charT_01_4" id="astd_1_1char__traits_3_01charT_01_4">
 <area shape="rect" href="structstd_1_1char__traits.html" title=" " alt="" coords="5,5,191,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_69.png" border="0" usemap="#astd_1_1tuple_3_01Types_01_4" alt=""/>
+<tr><td><img src="inherit_graph_78.png" border="0" usemap="#astd_1_1tuple_3_01Types_01_4" alt=""/>
 <map name="astd_1_1tuple_3_01Types_01_4" id="astd_1_1tuple_3_01Types_01_4">
 <area shape="rect" href="classstd_1_1tuple.html" title=" " alt="" coords="5,5,156,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_70.png" border="0" usemap="#aTextureHolder" alt=""/>
+<tr><td><img src="inherit_graph_79.png" border="0" usemap="#aTextureHolder" alt=""/>
 <map name="aTextureHolder" id="aTextureHolder">
 <area shape="rect" href="classTextureHolder.html" title=" " alt="" coords="5,5,119,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_71.png" border="0" usemap="#aweather__engine" alt=""/>
+<tr><td><img src="inherit_graph_80.png" border="0" usemap="#aweather__engine" alt=""/>
 <map name="aweather__engine" id="aweather__engine">
 <area shape="rect" href="structweather__engine.html" title=" " alt="" coords="5,5,132,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_72.png" border="0" usemap="#aWorldMap" alt=""/>
+<tr><td><img src="inherit_graph_81.png" border="0" usemap="#aWorldMap" alt=""/>
 <map name="aWorldMap" id="aWorldMap">
 <area shape="rect" href="classWorldMap.html" title=" " alt="" coords="5,5,92,32"/>
 </map>
 </td></tr>
 </table>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

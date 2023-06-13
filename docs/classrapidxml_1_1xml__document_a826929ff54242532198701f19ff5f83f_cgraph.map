@@ -1,0 +1,6 @@
+<map id="rapidxml::xml_document::clear" name="rapidxml::xml_document::clear">
+<area shape="rect" id="node1" title=" " alt="" coords="5,79,191,120"/>
+<area shape="rect" id="node2" href="$classrapidxml_1_1memory__pool.html#aad377c835fdaed1cb2cc9df194cf84e4" title=" " alt="" coords="253,5,431,47"/>
+<area shape="rect" id="node3" href="$classrapidxml_1_1xml__node.html#aa8d5d9484aa1eb5ff1841a073c84c1aa" title="Removes all attributes of node." alt="" coords="261,71,423,127"/>
+<area shape="rect" id="node4" href="$classrapidxml_1_1xml__node.html#a95735358b079ae0adcfbbac69aa1fbc3" title="Removes all child nodes (but not attributes)." alt="" coords="239,152,445,193"/>
+</map>
