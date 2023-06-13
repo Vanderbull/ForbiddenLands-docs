@@ -128,8 +128,7 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa8f7b0b0a71a55f9d16d8103f8874dbf"><td class="memItemLeft" align="right" valign="top"><a id="aa8f7b0b0a71a55f9d16d8103f8874dbf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (const char *title, int width=640, int height=480, int bpp=0, bool fullscreen=false)</td></tr>
+<tr class="memitem:aa8f7b0b0a71a55f9d16d8103f8874dbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGameEngine.html#aa8f7b0b0a71a55f9d16d8103f8874dbf">Init</a> (const char *title, int width=640, int height=480, int bpp=0, bool fullscreen=false)</td></tr>
 <tr class="separator:aa8f7b0b0a71a55f9d16d8103f8874dbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2b1ae2e01d011c10a95ba28bf97c998"><td class="memItemLeft" align="right" valign="top"><a id="ac2b1ae2e01d011c10a95ba28bf97c998"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Cleanup</b> ()</td></tr>
@@ -467,6 +466,57 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>Season_Length</b> = 90
 int&#160;</td><td class="memItemRight" valign="bottom"><b>Elapsed_Time</b> = 0</td></tr>
 <tr class="separator:a39a51591cbfa97980ca3fe449d6453ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa8f7b0b0a71a55f9d16d8103f8874dbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8f7b0b0a71a55f9d16d8103f8874dbf">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CGameEngine::Init </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em> = <code>640</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em> = <code>480</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bpp</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fullscreen</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get resolution information.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Rewrite it so that it only supports the main monitor.</dd></dl>
+<p>Replace with SDL_OpenAudioDevice().</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Replace current code with SDL_OpenAudioDevice().</dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a978d9be62400bdf1afeab172714d7230"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a978d9be62400bdf1afeab172714d7230">&#9670;&nbsp;</a></span>current</h2>
@@ -481,9 +531,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>Elapsed_Time</b> = 0</
 </div><div class="memdoc">
 
 <p>This is a resolution variable. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd><p class="startdd">Implement error handling. </p>
-<p class="enddd">Optimize the algorithm. </p>
-</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Rename it to Current_Resolution </dd></dl>
 
 </div>
 </div>

@@ -178,7 +178,7 @@ $(function() {
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">int</span> currentTimeOfDay = day;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;/   <span class="keywordtype">void</span> renderDaytime();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> renderDaytime();</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> renderQuests();</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> renderQuestsList();</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
@@ -193,263 +193,263 @@ $(function() {
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    SDL_Window * window;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    SDL_DisplayMode monitor[6];</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classCGameEngine.html#a978d9be62400bdf1afeab172714d7230">  131</a></span>&#160;    SDL_DisplayMode <a class="code" href="classCGameEngine.html#a978d9be62400bdf1afeab172714d7230">current</a>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">struct </span>utsname uts;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    SDL_Renderer * renderer;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    SDL_Color Green = {0, 255, 0, 255};</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    SDL_Color BlueGreen = {255, 255, 255, 255};</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    SDL_Color Blue = {0, 0, 255, 255};</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    SDL_Color Red = {255, 0, 0, 255};</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    SDL_Color White = {255, 255, 255, 255};</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    SDL_Color Black = {0, 0, 0, 255};</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    SDL_Texture* North;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    SDL_Texture* East;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    SDL_Texture* South;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    SDL_Texture* West;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">// Make these a blob</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    SDL_Texture* mapTexture[16][16][4];</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    SDL_Texture* encampTexture[4];</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    SDL_Texture* battleState;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    SDL_Texture* gameoverState;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    SDL_Texture* slot;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">//Make these a blob</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    TTF_Font* gameTitleFont;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    TTF_Font* gameBreadTextFont;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">int</span> StartAbilityPoints = 20;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    uint32_t experience_required_for_level(<span class="keywordtype">double</span> level)</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">double</span> exp = 0;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">double</span> x = 1; x&lt;level; x++)</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            exp += std::floor(x + (300 + (level * 100)) * std::pow(2, (x / 10)));</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        exp = (std::round(std::floor(exp) / 10) * 10);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordflow">return</span> (uint32_t)exp;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    };</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    std::vector&lt;std::string&gt; LearnedSkill;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    std::vector&lt;SDL_Rect&gt; SkillRect;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    uint32_t experience_required_for_skill_level(<span class="keywordtype">double</span> level)</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    {</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordtype">double</span> exp = 0;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">double</span> x=1;x&lt;level;x++)</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            exp += std::floor(x + (150 + (level * 5)) * std::pow(2, (x / 10)));</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        exp = (std::round(std::floor(exp) / 10) * 10);</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">return</span> (uint32_t)exp;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordtype">int</span> AllowedSkills = 3;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    std::map&lt;std::string, ItemRecord&gt; ItemObject;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    std::vector&lt;std::string&gt; v_ItemNames = {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                            <span class="stringliteral">&quot;Bronze ring&quot;</span>,<span class="stringliteral">&quot;Iron ring&quot;</span>,</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                                            <span class="stringliteral">&quot;Silver ring&quot;</span>,<span class="stringliteral">&quot;Golden ring&quot;</span>,<span class="stringliteral">&quot;Jewel ring&quot;</span>,</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                                            <span class="stringliteral">&quot;Pearl ring&quot;</span>, <span class="stringliteral">&quot;Emerald ring&quot;</span>, <span class="stringliteral">&quot;Opal ring&quot;</span>,</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                                            <span class="stringliteral">&quot;Rune of Power&quot;</span>,<span class="stringliteral">&quot;Rune of Personality&quot;</span>,<span class="stringliteral">&quot;Rune of Intelligence&quot;</span>,</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                                            <span class="stringliteral">&quot;Rune of Toughness&quot;</span>,<span class="stringliteral">&quot;Rune of Technique&quot;</span>,<span class="stringliteral">&quot;Rune of Quickness&quot;</span>,</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                                            <span class="stringliteral">&quot;Rune of Perception&quot;</span>,<span class="stringliteral">&quot;Rune of Fitness&quot;</span>,<span class="stringliteral">&quot;Rune of Lore&quot;</span>,</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                                            <span class="stringliteral">&quot;Rune of Persuasion&quot;</span>,<span class="stringliteral">&quot;Rune of Taming&quot;</span>,<span class="stringliteral">&quot;Rune of Quickhand&quot;</span>,</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                                            <span class="stringliteral">&quot;Rune of Stealth&quot;</span>,<span class="stringliteral">&quot;Rune of Awareness&quot;</span>,<span class="stringliteral">&quot;Rune of Fire Element&quot;</span>,</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                                            <span class="stringliteral">&quot;Rune of Air Element&quot;</span>,<span class="stringliteral">&quot;Rune of Water Element&quot;</span>,<span class="stringliteral">&quot;Rune of Earth Element&quot;</span>,</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                                            <span class="stringliteral">&quot;Rune of Energy Element&quot;</span>,<span class="stringliteral">&quot;Rune of Mental Element&quot;</span>,<span class="stringliteral">&quot;Rune of Soul Element&quot;</span>,</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                                            <span class="stringliteral">&quot;Potion of Healing&quot;</span>,<span class="stringliteral">&quot;Potion of Cure Poison&quot;</span>,<span class="stringliteral">&quot;Potion of Cure Flaming&quot;</span>,</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                                            <span class="stringliteral">&quot;Potion of Cure Paralysis&quot;</span>,<span class="stringliteral">&quot;Potion of Cure Fear&quot;</span>,<span class="stringliteral">&quot;Potion of cure Insanity&quot;</span>,</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                                            <span class="stringliteral">&quot;Potion of cure Exhaustion&quot;</span>, <span class="stringliteral">&quot;Potion of cure Curse&quot;</span>, <span class="stringliteral">&quot;Potion of Poison&quot;</span>,</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                                            <span class="stringliteral">&quot;Torch&quot;</span>,</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                                            };</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    std::vector&lt;std::string&gt; v_ItemNamesShop;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">//std::vector&lt;Item&gt; v_Item;</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="comment">//access to the elements will be a bit harder (v[width * y +x] or v[height * x + y])</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    std::array&lt;Item,9*10&gt; v_Item;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    std::array&lt;Item,9*10&gt; v_InventoryItem;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    std::vector&lt;SkillObject&gt; v_Skill;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    std::vector&lt;SkillObject&gt; v_LearnedSkill;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="classSkillObject.html">SkillObject</a> Skill;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">void</span> AddItem();</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">void</span> AddSkill();</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="comment">// Look at enums with flags later</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keyword">enum</span> BodyParts {HEAD,NECK,SHOULDER,CHEST,LEFT_ARM,RIGHT_ARM,HANDS,LEGS,FEET};</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="classCGameEngine_1_1BaseMonster.html">  223</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCGameEngine_1_1BaseMonster.html">BaseMonster</a></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        std::string Name;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordtype">int</span> Type;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordtype">int</span> LV;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordtype">int</span> HP;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordtype">int</span> Pro;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordtype">int</span> Tou;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordtype">int</span> Qui;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordtype">int</span> Actions;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordtype">int</span> Resistance;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordtype">int</span> Vunerability;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    };</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">void</span> read_directory(<span class="keyword">const</span> std::string&amp; name, std::vector&lt;string&gt;&amp; v)</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        DIR* dirp = opendir(name.c_str());</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="keywordflow">if</span>(dirp == NULL)</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Error in read_directory function, missing folder&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            exit(errno);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keyword">struct </span>dirent * dp;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">while</span> ((dp = readdir(dirp)) != NULL) {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            v.push_back(dp-&gt;d_name);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        }</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        closedir(dirp);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    std::vector&lt;std::string&gt; imagesFiles;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    SDL_Rect CurrentLocation{0,0,128,128};</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordtype">bool</span> newGame = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <a class="code" href="structweather__engine.html">weather_engine</a> WeatherEngine;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    SDL_Rect worldMapTiles[17][41];</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordtype">void</span> generateWorldMapTiles()</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    {</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 0; x &lt; 17; x++)</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; 41; y++)</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                SDL_Rect imageSize = {x*16 + 50, y*16 + 50,8,8};</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                worldMapTiles[x][y] = imageSize;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">void</span> renderWorldMapTiles()</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        std::vector&lt;vector&lt;string&gt;&gt; content;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        std::vector&lt;string&gt; row;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        std::string line, word;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordtype">int</span> counterx,countery = 0;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        fstream file (<span class="stringliteral">&quot;./assets/data/textures/sweden_data&quot;</span>, ios::in);</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">if</span>(file.is_open())</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">while</span>(getline(file, line))</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                row.clear();</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                stringstream str(line);</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                RenderText(line.c_str(), Black, current.w / 2,countery*24,48);</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                content.push_back(row);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                countery++;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            exit(99);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        }</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    Mix_Chunk* _sample[20];</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordtype">int</span> number_of_enemies = 1;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">int</span> random_events[16][16][28];</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">int</span> fog_of_war_raiding[16][16][28];</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordtype">int</span> fog_of_war_worldmap[10][35];</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Engine, <span class="keyword">class</span> Integer, <span class="keywordtype">size_t</span> SIZE&gt;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">void</span> fill_array(Engine&amp; eng, std::array&lt;Integer, SIZE&gt;&amp; a, Integer lower = 0, Integer upper = 1000)</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        std::uniform_int_distribution&lt;Integer&gt; uid1(lower, upper);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        std::generate(a.begin(), a.end(), [&amp;]</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            return uid1(eng);</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        });</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type, std::<span class="keywordtype">size_t</span> M, std::<span class="keywordtype">size_t</span> N, std::<span class="keywordtype">size_t</span> O&gt;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    constexpr <span class="keywordtype">void</span> fill_3D_array(Type(&amp;arr3D)[M][N][O], <span class="keyword">const</span> Type val = Type{}) noexcept</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    {</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;       std::fill_n(&amp;arr3D[0][0][0], M * N * O, val);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;       <span class="comment">// or using std::fill</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;       <span class="comment">// std::fill(&amp;arr3D[0][0][0], &amp;arr3D[0][0][0] + (M * N * O), val);</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    }</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type, std::<span class="keywordtype">size_t</span> M, std::<span class="keywordtype">size_t</span> N, std::<span class="keywordtype">size_t</span> O&gt;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    constexpr <span class="keywordtype">void</span> print_3D_array(Type(&amp;arr3D)[M][N][O]) noexcept</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;       <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; arr2D : arr3D)</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;       {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;          std::cout &lt;&lt; <span class="stringliteral">&quot;Array2D:.....\n&quot;</span>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; arr : arr2D)</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;          {</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;             std::cout &lt;&lt; <span class="stringliteral">&quot;Array:.....\n&quot;</span>;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;             <span class="keywordflow">for</span> (<span class="keyword">const</span> Type ele : arr)</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;             {</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                std::cout &lt;&lt; ele &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;             }</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;             std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;          }</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;       }</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    }</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="comment">//Loot state variables</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">int</span> hides = 10;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">int</span> slaves = 10;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">int</span> gold = 0;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">int</span> silver = 0;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keyword">enum</span> {WEST,EAST,SOUTH,NORTH};</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    Mix_Music* song = NULL;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
-<div class="line"><a name="l00354"></a><span class="lineno"><a class="line" href="structCGameEngine_1_1Army.html">  354</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structCGameEngine_1_1Army.html">Army</a></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    {</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordtype">int</span> old;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordtype">int</span> middleage;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordtype">int</span> young;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    };</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <a class="code" href="structCGameEngine_1_1Army.html">Army</a> Raiding_Party;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    std::string Village_Name = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordtype">int</span> Daytime = 0; <span class="comment">// Morning, Afternoon, Evening, Night</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordtype">int</span> Season = 0; <span class="comment">// Summer, Spring, Fall, Winter</span></div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordtype">int</span> Season_Length = 90; <span class="comment">// Number of days</span></div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">int</span> Elapsed_Time = 0;</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordtype">int</span> Get_Elapsed_Time()</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    {</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordflow">return</span> Elapsed_Time;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="comment">// the stack of states</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    std::vector&lt;CGameState*&gt; states;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordtype">bool</span> m_running;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordtype">bool</span> m_fullscreen;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;};</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classCGameEngine.html#a978d9be62400bdf1afeab172714d7230">  130</a></span>&#160;    SDL_DisplayMode <a class="code" href="classCGameEngine.html#a978d9be62400bdf1afeab172714d7230">current</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">struct </span>utsname uts;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    SDL_Renderer * renderer;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    SDL_Color Green = {0, 255, 0, 255};</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    SDL_Color BlueGreen = {255, 255, 255, 255};</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    SDL_Color Blue = {0, 0, 255, 255};</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    SDL_Color Red = {255, 0, 0, 255};</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    SDL_Color White = {255, 255, 255, 255};</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    SDL_Color Black = {0, 0, 0, 255};</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    SDL_Texture* North;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    SDL_Texture* East;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    SDL_Texture* South;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    SDL_Texture* West;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">// Make these a blob</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    SDL_Texture* mapTexture[16][16][4];</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    SDL_Texture* encampTexture[4];</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    SDL_Texture* battleState;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    SDL_Texture* gameoverState;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    SDL_Texture* slot;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">//Make these a blob</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    TTF_Font* gameTitleFont;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    TTF_Font* gameBreadTextFont;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">int</span> StartAbilityPoints = 20;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    uint32_t experience_required_for_level(<span class="keywordtype">double</span> level)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">double</span> exp = 0;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">double</span> x = 1; x&lt;level; x++)</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            exp += std::floor(x + (300 + (level * 100)) * std::pow(2, (x / 10)));</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        exp = (std::round(std::floor(exp) / 10) * 10);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">return</span> (uint32_t)exp;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    };</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    std::vector&lt;std::string&gt; LearnedSkill;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    std::vector&lt;SDL_Rect&gt; SkillRect;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    uint32_t experience_required_for_skill_level(<span class="keywordtype">double</span> level)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordtype">double</span> exp = 0;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">double</span> x=1;x&lt;level;x++)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            exp += std::floor(x + (150 + (level * 5)) * std::pow(2, (x / 10)));</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        exp = (std::round(std::floor(exp) / 10) * 10);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">return</span> (uint32_t)exp;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">int</span> AllowedSkills = 3;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    std::map&lt;std::string, ItemRecord&gt; ItemObject;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    std::vector&lt;std::string&gt; v_ItemNames = {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                                            <span class="stringliteral">&quot;Bronze ring&quot;</span>,<span class="stringliteral">&quot;Iron ring&quot;</span>,</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                            <span class="stringliteral">&quot;Silver ring&quot;</span>,<span class="stringliteral">&quot;Golden ring&quot;</span>,<span class="stringliteral">&quot;Jewel ring&quot;</span>,</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                                            <span class="stringliteral">&quot;Pearl ring&quot;</span>, <span class="stringliteral">&quot;Emerald ring&quot;</span>, <span class="stringliteral">&quot;Opal ring&quot;</span>,</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                                            <span class="stringliteral">&quot;Rune of Power&quot;</span>,<span class="stringliteral">&quot;Rune of Personality&quot;</span>,<span class="stringliteral">&quot;Rune of Intelligence&quot;</span>,</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                                            <span class="stringliteral">&quot;Rune of Toughness&quot;</span>,<span class="stringliteral">&quot;Rune of Technique&quot;</span>,<span class="stringliteral">&quot;Rune of Quickness&quot;</span>,</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                                            <span class="stringliteral">&quot;Rune of Perception&quot;</span>,<span class="stringliteral">&quot;Rune of Fitness&quot;</span>,<span class="stringliteral">&quot;Rune of Lore&quot;</span>,</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                                            <span class="stringliteral">&quot;Rune of Persuasion&quot;</span>,<span class="stringliteral">&quot;Rune of Taming&quot;</span>,<span class="stringliteral">&quot;Rune of Quickhand&quot;</span>,</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                                            <span class="stringliteral">&quot;Rune of Stealth&quot;</span>,<span class="stringliteral">&quot;Rune of Awareness&quot;</span>,<span class="stringliteral">&quot;Rune of Fire Element&quot;</span>,</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                                            <span class="stringliteral">&quot;Rune of Air Element&quot;</span>,<span class="stringliteral">&quot;Rune of Water Element&quot;</span>,<span class="stringliteral">&quot;Rune of Earth Element&quot;</span>,</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                                            <span class="stringliteral">&quot;Rune of Energy Element&quot;</span>,<span class="stringliteral">&quot;Rune of Mental Element&quot;</span>,<span class="stringliteral">&quot;Rune of Soul Element&quot;</span>,</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                                            <span class="stringliteral">&quot;Potion of Healing&quot;</span>,<span class="stringliteral">&quot;Potion of Cure Poison&quot;</span>,<span class="stringliteral">&quot;Potion of Cure Flaming&quot;</span>,</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                                            <span class="stringliteral">&quot;Potion of Cure Paralysis&quot;</span>,<span class="stringliteral">&quot;Potion of Cure Fear&quot;</span>,<span class="stringliteral">&quot;Potion of cure Insanity&quot;</span>,</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                                            <span class="stringliteral">&quot;Potion of cure Exhaustion&quot;</span>, <span class="stringliteral">&quot;Potion of cure Curse&quot;</span>, <span class="stringliteral">&quot;Potion of Poison&quot;</span>,</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                                            <span class="stringliteral">&quot;Torch&quot;</span>,</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                                            };</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    std::vector&lt;std::string&gt; v_ItemNamesShop;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="comment">//std::vector&lt;Item&gt; v_Item;</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">//access to the elements will be a bit harder (v[width * y +x] or v[height * x + y])</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    std::array&lt;Item,9*10&gt; v_Item;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    std::array&lt;Item,9*10&gt; v_InventoryItem;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    std::vector&lt;SkillObject&gt; v_Skill;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    std::vector&lt;SkillObject&gt; v_LearnedSkill;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <a class="code" href="classSkillObject.html">SkillObject</a> Skill;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordtype">void</span> AddItem();</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">void</span> AddSkill();</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="comment">// Look at enums with flags later</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keyword">enum</span> BodyParts {HEAD,NECK,SHOULDER,CHEST,LEFT_ARM,RIGHT_ARM,HANDS,LEGS,FEET};</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="classCGameEngine_1_1BaseMonster.html">  222</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCGameEngine_1_1BaseMonster.html">BaseMonster</a></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        std::string Name;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordtype">int</span> Type;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keywordtype">int</span> LV;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordtype">int</span> HP;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordtype">int</span> Pro;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keywordtype">int</span> Tou;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordtype">int</span> Qui;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordtype">int</span> Actions;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordtype">int</span> Resistance;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordtype">int</span> Vunerability;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    };</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">void</span> read_directory(<span class="keyword">const</span> std::string&amp; name, std::vector&lt;string&gt;&amp; v)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        DIR* dirp = opendir(name.c_str());</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">if</span>(dirp == NULL)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;Error in read_directory function, missing folder&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            exit(errno);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keyword">struct </span>dirent * dp;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">while</span> ((dp = readdir(dirp)) != NULL) {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            v.push_back(dp-&gt;d_name);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        closedir(dirp);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    std::vector&lt;std::string&gt; imagesFiles;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    SDL_Rect CurrentLocation{0,0,128,128};</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">bool</span> newGame = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <a class="code" href="structweather__engine.html">weather_engine</a> WeatherEngine;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    SDL_Rect worldMapTiles[17][41];</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordtype">void</span> generateWorldMapTiles()</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 0; x &lt; 17; x++)</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; 41; y++)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                SDL_Rect imageSize = {x*16 + 50, y*16 + 50,8,8};</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                worldMapTiles[x][y] = imageSize;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">void</span> renderWorldMapTiles()</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        std::vector&lt;vector&lt;string&gt;&gt; content;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        std::vector&lt;string&gt; row;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        std::string line, word;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordtype">int</span> counterx,countery = 0;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        fstream file (<span class="stringliteral">&quot;./assets/data/textures/sweden_data&quot;</span>, ios::in);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">if</span>(file.is_open())</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="keywordflow">while</span>(getline(file, line))</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                row.clear();</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                stringstream str(line);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                RenderText(line.c_str(), Black, current.w / 2,countery*24,48);</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                content.push_back(row);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                countery++;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            exit(99);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    Mix_Chunk* _sample[20];</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">int</span> number_of_enemies = 1;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">int</span> random_events[16][16][28];</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">int</span> fog_of_war_raiding[16][16][28];</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordtype">int</span> fog_of_war_worldmap[10][35];</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Engine, <span class="keyword">class</span> Integer, <span class="keywordtype">size_t</span> SIZE&gt;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordtype">void</span> fill_array(Engine&amp; eng, std::array&lt;Integer, SIZE&gt;&amp; a, Integer lower = 0, Integer upper = 1000)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        std::uniform_int_distribution&lt;Integer&gt; uid1(lower, upper);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        std::generate(a.begin(), a.end(), [&amp;]</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            return uid1(eng);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        });</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    }</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type, std::<span class="keywordtype">size_t</span> M, std::<span class="keywordtype">size_t</span> N, std::<span class="keywordtype">size_t</span> O&gt;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    constexpr <span class="keywordtype">void</span> fill_3D_array(Type(&amp;arr3D)[M][N][O], <span class="keyword">const</span> Type val = Type{}) noexcept</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;       std::fill_n(&amp;arr3D[0][0][0], M * N * O, val);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;       <span class="comment">// or using std::fill</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;       <span class="comment">// std::fill(&amp;arr3D[0][0][0], &amp;arr3D[0][0][0] + (M * N * O), val);</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Type, std::<span class="keywordtype">size_t</span> M, std::<span class="keywordtype">size_t</span> N, std::<span class="keywordtype">size_t</span> O&gt;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    constexpr <span class="keywordtype">void</span> print_3D_array(Type(&amp;arr3D)[M][N][O]) noexcept</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;       <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; arr2D : arr3D)</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;       {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;          std::cout &lt;&lt; <span class="stringliteral">&quot;Array2D:.....\n&quot;</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; arr : arr2D)</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;          {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;             std::cout &lt;&lt; <span class="stringliteral">&quot;Array:.....\n&quot;</span>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;             <span class="keywordflow">for</span> (<span class="keyword">const</span> Type ele : arr)</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;             {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                std::cout &lt;&lt; ele &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;             }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;             std::cout &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;          }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;       }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">//Loot state variables</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keywordtype">int</span> hides = 10;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordtype">int</span> slaves = 10;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordtype">int</span> gold = 0;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">int</span> silver = 0;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keyword">enum</span> {WEST,EAST,SOUTH,NORTH};</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    Mix_Music* song = NULL;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
+<div class="line"><a name="l00353"></a><span class="lineno"><a class="line" href="structCGameEngine_1_1Army.html">  353</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structCGameEngine_1_1Army.html">Army</a></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordtype">int</span> old;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordtype">int</span> middleage;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordtype">int</span> young;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    };</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <a class="code" href="structCGameEngine_1_1Army.html">Army</a> Raiding_Party;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    std::string Village_Name = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordtype">int</span> Daytime = 0; <span class="comment">// Morning, Afternoon, Evening, Night</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordtype">int</span> Season = 0; <span class="comment">// Summer, Spring, Fall, Winter</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordtype">int</span> Season_Length = 90; <span class="comment">// Number of days</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordtype">int</span> Elapsed_Time = 0;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">int</span> Get_Elapsed_Time()</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordflow">return</span> Elapsed_Time;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="comment">// the stack of states</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    std::vector&lt;CGameState*&gt; states;</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordtype">bool</span> m_running;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordtype">bool</span> m_fullscreen;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;};</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassACTOR_html"><div class="ttname"><a href="classACTOR.html">ACTOR</a></div><div class="ttdef"><b>Definition:</b> actor.h:10</div></div>
-<div class="ttc" id="aclassCGameEngine_1_1BaseMonster_html"><div class="ttname"><a href="classCGameEngine_1_1BaseMonster.html">CGameEngine::BaseMonster</a></div><div class="ttdef"><b>Definition:</b> gameengine.h:224</div></div>
+<div class="ttc" id="aclassCGameEngine_1_1BaseMonster_html"><div class="ttname"><a href="classCGameEngine_1_1BaseMonster.html">CGameEngine::BaseMonster</a></div><div class="ttdef"><b>Definition:</b> gameengine.h:223</div></div>
 <div class="ttc" id="aclassCGameEngine_html"><div class="ttname"><a href="classCGameEngine.html">CGameEngine</a></div><div class="ttdef"><b>Definition:</b> gameengine.h:48</div></div>
-<div class="ttc" id="aclassCGameEngine_html_a978d9be62400bdf1afeab172714d7230"><div class="ttname"><a href="classCGameEngine.html#a978d9be62400bdf1afeab172714d7230">CGameEngine::current</a></div><div class="ttdeci">SDL_DisplayMode current</div><div class="ttdoc">This is a resolution variable.</div><div class="ttdef"><b>Definition:</b> gameengine.h:131</div></div>
+<div class="ttc" id="aclassCGameEngine_html_a978d9be62400bdf1afeab172714d7230"><div class="ttname"><a href="classCGameEngine.html#a978d9be62400bdf1afeab172714d7230">CGameEngine::current</a></div><div class="ttdeci">SDL_DisplayMode current</div><div class="ttdoc">This is a resolution variable.</div><div class="ttdef"><b>Definition:</b> gameengine.h:130</div></div>
 <div class="ttc" id="aclassCGameState_html"><div class="ttname"><a href="classCGameState.html">CGameState</a></div><div class="ttdef"><b>Definition:</b> gamestate.h:7</div></div>
 <div class="ttc" id="aclassItem_html"><div class="ttname"><a href="classItem.html">Item</a></div><div class="ttdef"><b>Definition:</b> itemobject.h:18</div></div>
 <div class="ttc" id="aclassQuestList_html"><div class="ttname"><a href="classQuestList.html">QuestList</a></div><div class="ttdef"><b>Definition:</b> questobject.h:25</div></div>
@@ -457,7 +457,7 @@ $(function() {
 <div class="ttc" id="aclassSoundHolder_html"><div class="ttname"><a href="classSoundHolder.html">SoundHolder</a></div><div class="ttdef"><b>Definition:</b> soundholder.h:15</div></div>
 <div class="ttc" id="aclassTextureHolder_html"><div class="ttname"><a href="classTextureHolder.html">TextureHolder</a></div><div class="ttdef"><b>Definition:</b> textureholder.h:14</div></div>
 <div class="ttc" id="aclassWorldMap_html"><div class="ttname"><a href="classWorldMap.html">WorldMap</a></div><div class="ttdef"><b>Definition:</b> worldmap.h:12</div></div>
-<div class="ttc" id="astructCGameEngine_1_1Army_html"><div class="ttname"><a href="structCGameEngine_1_1Army.html">CGameEngine::Army</a></div><div class="ttdef"><b>Definition:</b> gameengine.h:355</div></div>
+<div class="ttc" id="astructCGameEngine_1_1Army_html"><div class="ttname"><a href="structCGameEngine_1_1Army.html">CGameEngine::Army</a></div><div class="ttdef"><b>Definition:</b> gameengine.h:354</div></div>
 <div class="ttc" id="astructInGameTime_html"><div class="ttname"><a href="structInGameTime.html">InGameTime</a></div><div class="ttdef"><b>Definition:</b> ingametime.h:8</div></div>
 <div class="ttc" id="astructweather__engine_html"><div class="ttname"><a href="structweather__engine.html">weather_engine</a></div><div class="ttdef"><b>Definition:</b> weather.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
